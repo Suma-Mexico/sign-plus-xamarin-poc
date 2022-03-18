@@ -1,10 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:test"
              x:Class="test.MainPage">
 
     <StackLayout VerticalOptions="Center">
-        <Button Text="Show pdf sign" Clicked="ClickedShowSignPlus"/>
+        <local:SignPlusView x:Name="SignPlusView"/>
+        <Button Text="Limpiar" Clicked="ClickedCleanSignPlus"/>
+        <Button Text="Listo" Clicked="ClickedGetSignSignPlus"/>
     </StackLayout>
 
 </ContentPage>

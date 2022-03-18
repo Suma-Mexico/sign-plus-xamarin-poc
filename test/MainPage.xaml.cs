@@ -1,6 +1,5 @@
 ﻿using System;
 using Xamarin.Forms;
-using sign_plus_sdk;
 
 namespace test
 {
@@ -11,10 +10,17 @@ namespace test
             InitializeComponent();
         }
 
-        private async void ClickedShowSignPlus(object sender, EventArgs args)
+        private async void ClickedCleanSignPlus(object sender, EventArgs args)
         {
-            var signPlusPage = new SignPlusPage("JoseLuisAcosta_Others", "Ej4QpQ33HYwZ2JXYTLCf6c1li3vTLhjm", "14f8fc7c-8f04-451e-ad57-a0bb1d8c11e1", "7f14c9e4-ed85-41c7-a6ef-ef75ee35e435");
-            await Navigation.PushAsync(new NavigationPage(signPlusPage));
+            SignPlusView view = this.FindByName<SignPlusView>("SignPlusView");
+            view.clearSignature();
+        }
+
+        private async void ClickedGetSignSignPlus(object sender, EventArgs args)
+        {
+            SignPlusView view = this.FindByName<SignPlusView>("SignPlusView");
+            String result = await view.getSignature();
+            Console.WriteLine(result);
         }
     }
 }

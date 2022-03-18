@@ -20,5 +20,11 @@
     <None Remove="sdk_demo" />
     <None Remove="sign_plus" />
     <None Remove="sign_plus_sdk" />
+    <None Remove="sign_plus_sdk_2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="sign_plus_sdk_2.0">
+      <HintPath>..\..\sign_plus_sdk_2.0\sign_plus_sdk_2.0\bin\Release\netstandard2.0\sign_plus_sdk_2.0.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
